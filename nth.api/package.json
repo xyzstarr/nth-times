@@ -1,0 +1,13 @@
+{
+  "name": "nth.api",
+  "version": "0.0.0",
+  "description": "nth.api",
+  "main": "app.js",
+  "author": {
+    "name": "Admin",
+    "email": ""
+  },
+  "dependencies": {
+    "hapi": "^13.3.0"
+  }
+}

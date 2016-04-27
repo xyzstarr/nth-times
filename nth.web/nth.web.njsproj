@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>nth.web</Name>
+    <RootNamespace>nth.web</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e99db575-27aa-4d8c-997f-1a20fbe3d52e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="material-start-master\app\src\users\UserController.js" />
+    <Compile Include="material-start-master\app\src\users\Users.js" />
+    <Compile Include="material-start-master\app\src\users\UserService.js" />
+    <Compile Include="material-start-master\test\e2e\pages\ContactUser.js" />
+    <Compile Include="material-start-master\test\e2e\pages\UserDetails.js" />
+    <Compile Include="material-start-master\test\e2e\pages\UserList.js" />
+    <Compile Include="material-start-master\test\e2e\scenarios\users.js" />
+    <Compile Include="material-start-master\test\karma.conf.js" />
+    <Compile Include="material-start-master\test\protractor.conf.js" />
+    <Compile Include="material-start-master\test\unit\users\UserService.spec.js" />
+    <Compile Include="server.js" />
+    <Content Include="material-start-master\.gitignore" />
+    <Content Include="material-start-master\.jshintrc" />
+    <Content Include="material-start-master\.travis.yml" />
+    <Content Include="material-start-master\app\assets\app.css" />
+    <Content Include="material-start-master\app\assets\svg\avatar-1.svg" />
+    <Content Include="material-start-master\app\assets\svg\avatar-4.svg" />
+    <Content Include="material-start-master\app\assets\svg\avatars.svg" />
+    <Content Include="material-start-master\app\assets\svg\google_plus.svg" />
+    <Content Include="material-start-master\app\assets\svg\hangouts.svg" />
+    <Content Include="material-start-master\app\assets\svg\mail.svg" />
+    <Content Include="material-start-master\app\assets\svg\menu.svg" />
+    <Content Include="material-start-master\app\assets\svg\phone.svg" />
+    <Content Include="material-start-master\app\assets\svg\share.svg" />
+    <Content Include="material-start-master\app\assets\svg\twitter.svg" />
+    <Content Include="material-start-master\app\index.html" />
+    <Content Include="material-start-master\app\src\users\view\contactSheet.html" />
+    <Content Include="material-start-master\LICENSE" />
+    <Content Include="material-start-master\package.json" />
+    <Content Include="material-start-master\README.md" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="material-start-master\" />
+    <Folder Include="material-start-master\app\" />
+    <Folder Include="material-start-master\app\assets\" />
+    <Folder Include="material-start-master\app\assets\svg\" />
+    <Folder Include="material-start-master\app\src\" />
+    <Folder Include="material-start-master\app\src\users\" />
+    <Folder Include="material-start-master\app\src\users\view\" />
+    <Folder Include="material-start-master\test\" />
+    <Folder Include="material-start-master\test\e2e\" />
+    <Folder Include="material-start-master\test\e2e\pages\" />
+    <Folder Include="material-start-master\test\e2e\scenarios\" />
+    <Folder Include="material-start-master\test\unit\" />
+    <Folder Include="material-start-master\test\unit\users\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
