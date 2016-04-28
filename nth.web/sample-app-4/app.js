@@ -2,6 +2,13 @@
   'use strict';
   var express = require('express');
   var app = express();
+    
+    
+  var cors = require('cors');
+app.use(cors());  
+    
+    
+app.options('*', cors());
 
   require('./config/config_app')(app);
   require('./config/config_routes')(app);

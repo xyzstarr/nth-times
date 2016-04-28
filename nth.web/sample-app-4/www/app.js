@@ -8,10 +8,10 @@ controller('MainCtrl', function($rootScope, $scope, $mdToast, $animate, $http, $
     returndate: new Date(),
     departuredate: new Date()
   };
-
   $scope.prices = [{
     show: '$200',
-    value: 200
+            value: 200,
+    currency:"Rupee"
   }, {
     show: '$300',
     value: 300
@@ -102,7 +102,27 @@ controller('MainCtrl', function($rootScope, $scope, $mdToast, $animate, $http, $
         '. Try again!');
     });
   })();
+    (function getYahoo() {
+    var cities = [];
+        $http.get('http://finance.yahoo.com/webservice/v1/symbols/YHOO,AAPL/quote?format=json&view=detail')
+    .success(function (data) {
+      //cities = (JSON.parse(data.info)).Cities || [];
+      //self.states = cities.map(function(state) {
+      //  return {
+      //    value: state.code,
+      //    display: state.code + '-' + state.countryName
+      //  };
+            //});
+            $scope.counter = 0
 
+      $scope.yData = [] = data.list.resources
+      console.log(data)
+    }).error(function(err) {
+      $scope.showSimpleToast('Error: ' +
+        JSON.stringify(err) +
+        '. Try again!');
+    });
+  })();
   self.querySearch = function(query) {
     var results = query ?
       self.states.filter(createFilterFor(query)) :
