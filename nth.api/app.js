@@ -58,11 +58,13 @@
         var modelDefinition = modelFileRetriever.readFileSync(modelsFolder + modelFile + ".json");
         var formFields = []
         for (var item in modelDefinition.properties) {
+            console.log(item)
             var formFieldTemplate = {
                 "type": "input",
                 "key": item,
                 "templateOptions": {
                     "type": "text",
+                    "label": "item.description",
                     "placeholder": item,
                     "icon": "ion-person",
                     required : false,

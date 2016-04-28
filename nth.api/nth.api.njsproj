@@ -31,12 +31,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="scripts\boot\mongo-connect.js" />
+    <Compile Include="scripts\boot\nthMongo.js" />
     <Compile Include="scripts\sandpit\plug-it-in.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="scripts\" />
+    <Folder Include="scripts\boot\" />
     <Folder Include="scripts\sandpit\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

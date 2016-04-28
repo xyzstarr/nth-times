@@ -68,7 +68,7 @@
 				//var props = {}
 				props = (results.data);
 									for  (var item in props) {
-										  console.log(props[item].key)
+										  console.log(props[item])
 										  //tempField.key = item
 										  var tempField = 
       {
@@ -76,7 +76,8 @@
         "key": props[item].key,
         "templateOptions": {
           "type": "text",
-          "placeholder": props[item].key,
+                            "placeholder": "props[item].description",
+          "label": props[item].key,
           "icon": "ion-person",
           required : false,
           "iconPlaceholder": true

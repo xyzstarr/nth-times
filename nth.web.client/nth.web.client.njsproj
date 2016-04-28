@@ -267,6 +267,13 @@
     <Compile Include="app\src\users\Users.js" />
     <Compile Include="app\src\users\UserService.js" />
     <Compile Include="server.js" />
+    <Compile Include="test\e2e\pages\ContactUser.js" />
+    <Compile Include="test\e2e\pages\UserDetails.js" />
+    <Compile Include="test\e2e\pages\UserList.js" />
+    <Compile Include="test\e2e\scenarios\users.js" />
+    <Compile Include="test\karma.conf.js" />
+    <Compile Include="test\protractor.conf.js" />
+    <Compile Include="test\unit\users\UserService.spec.js" />
     <Content Include="app\assets\app.css" />
     <Content Include="app\assets\custom-styles.css" />
     <Content Include="app\assets\Stylesheet1.css" />
@@ -932,6 +939,12 @@
     <Folder Include="app\src\tests\" />
     <Folder Include="app\src\users\" />
     <Folder Include="app\src\users\view\" />
+    <Folder Include="test\" />
+    <Folder Include="test\e2e\" />
+    <Folder Include="test\e2e\pages\" />
+    <Folder Include="test\e2e\scenarios\" />
+    <Folder Include="test\unit\" />
+    <Folder Include="test\unit\users\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\lib\angular-formly-templates-ionic\examples\default\www\lib\angular-ui-router\api\angular-ui-router.d.ts" />
