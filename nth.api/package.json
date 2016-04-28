@@ -8,6 +8,7 @@
     "email": ""
   },
   "dependencies": {
-    "hapi": "^13.3.0"
+    "hapi": "^13.3.0",
+    "jsonfile": "^2.3.0"
   }
 }
