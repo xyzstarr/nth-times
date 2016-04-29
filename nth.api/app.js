@@ -20,6 +20,16 @@
     server.start(function () {
         console.log('Server up and running at:', server.info.uri);
     });
+	var deCamelize = function(str){
+    // insert a space before all caps
+    return(
+str
+.replace(/([A-Z])/g, ' $1')
+    // uppercase the first character
+    .replace(/^./, function(str){ return str.toUpperCase(); })
+)
+
+}
     var startDBService = function (plugin, options, next) {
         var child_process = require('child_process')
         //D:\work\tools\MEAN/mongodb\bin\mongod.exe
@@ -68,7 +78,7 @@
                 "templateOptions": {
                     "type": "text",
                     //"label": ModelProperties[item].description,
-                    "label":item,
+                    "label":deCamelize(item),
                     //"placeholder":  item,
                     //"icon": "ion-person",
                     required : false,
