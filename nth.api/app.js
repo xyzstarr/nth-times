@@ -58,6 +58,7 @@
         // synchronous version
         var modelDefinition = modelFileRetriever.readFileSync(modelsFolder + modelFile + ".json");
         var formFields = []
+
         var ModelProperties = modelDefinition.properties
         for (var item in ModelProperties) {
            // console.log(item.type)
