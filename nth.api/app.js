@@ -28,11 +28,12 @@
             var MongoClient = require('mongodb').MongoClient;
             
             // Connect to the db
-            MongoClient.connect("mongodb://localhost:27017/thing", function (err, db) {
+            MongoClient.connect("mongodb://127.0.0.1:27017/thing", function (err, db) {
                 if (!err) {
                     console.log("We are connected");
                     //console.log(server)
                 }
+                else { console.log(err)}
             });
             if (err) {
                 console.log(err);
@@ -46,7 +47,7 @@
     function readModelDefinitionFile(modelFile) {
         console.log(modelFile)
          //var modelFile = "Ticket"
-        var modelsFolder = "D:/work/dev/nth/data_dumps/schema_models/generated_loopback_models/"
+        var modelsFolder = "D:/work/dev/nth/data_dumps/schema_models/generated_loopback_models/testing/"
         var modelFileRetriever = require('jsonfile');
         /*
         // asynchronous version
@@ -57,18 +58,20 @@
         // synchronous version
         var modelDefinition = modelFileRetriever.readFileSync(modelsFolder + modelFile + ".json");
         var formFields = []
-        for (var item in modelDefinition.properties) {
-            console.log(item)
+        var ModelProperties = modelDefinition.properties
+        for (var item in ModelProperties) {
+           // console.log(item.type)
             var formFieldTemplate = {
                 "type": "input",
                 "key": item,
                 "templateOptions": {
                     "type": "text",
-                    "label": "item.description",
-                    "placeholder": item,
-                    "icon": "ion-person",
+                    //"label": ModelProperties[item].description,
+                    "label":item,
+                    //"placeholder":  item,
+                    //"icon": "ion-person",
                     required : false,
-                    "iconPlaceholder": true
+                    //"iconPlaceholder": true
                 }
             }
             formFields.push(formFieldTemplate)
