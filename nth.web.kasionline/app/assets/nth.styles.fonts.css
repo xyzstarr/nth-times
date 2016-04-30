@@ -1,6 +1,9 @@
 ﻿body {
   margin: 20px
 }
+nth-md-hint {
+    font-size:8px !important;
+	}
 
 .formly-field {
   margin-bottom: 16px;
