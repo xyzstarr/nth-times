@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="assets/nth.styles.fonts.css" rel="stylesheet" />
+
+    <!-- Angular Material CSS now available via Google CDN; version 0.10 used here -->
+    <link href="lib/angular-material/angular-material.min.css" rel="stylesheet">
+
+    <!-- apiCheck is used by formly to validate its api -->
+    <script src="lib/api-check/dist/api-check.js"></script>
+
+    <!-- Angular Material Dependencies -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+
+    <!-- Angular Material Javascript now available via Google CDN; version 0.10 used here -->
+    <script src="lib/angular-material/angular-material.min.js"></script>
+
+    <!-- This is the latest version of formly core. -->
+    <script src="lib/angular-formly/dist/formly.js"></script>
+
+    <!--Our application scripts-->
+    <script src="src/core/nth.app.init.js"></script>
+    <script src="src/core/nth.app.run.formly.config.js"></script>
+    <script src="src/core/nth.app.main.controller.js"></script>
+    <script src="src/api/nth.app.api.factory.js"></script>
+    <script src="src/api/models/nth.app.models.js"></script>
+    <title>nth</title>
+</head>
+
+<body ng-app="nth.app" class="icondemoFontIconsWithClassnames">
+     <div ng-controller="ModelsController as vm">
+       
+         <md-card><h1>{{vm.search.searchPhrase}}</h1><form ng-submit="vm.doSubmit()" name="vm.form" novalidate>
+    <formly-form model="vm.modelInstance" fields="vm.formFields" options="vm.options" form="vm.form">
+        <md-button type="submit" class="md-raised md-primary" ng-disabled="vm.form.$invalid">Submit</md-button>
+        <md-button type="button" class="md-raised" ng-click="vm.options.resetModel()">Reset</md-button>
+    </formly-form>
+</form></md-card>
+       
+       <hr />
+       <h2>Model Value</h2>
+         This example is running angular version "{{vm.env.angularVersion}}" and formly version "{{vm.env.formlyVersion}}"
+       <pre>{{vm.modelInstance | json}}</pre>
+       <h2>Fields <small>(note, functions are not shown)</small></h2>
+       <pre>{{vm.formFields | json}}</pre>
+       <h2>Form</h2>
+       <pre>{{vm.form | json}}</pre>
+     </div>
+<!-- Put custom templates here -->
+</body>
+</html>

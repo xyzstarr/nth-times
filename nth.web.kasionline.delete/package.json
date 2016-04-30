@@ -1,0 +1,42 @@
+{
+  "name": "nth.web",
+  "version": "0.0.0",
+  "description": "nth.web",
+  "main": "server.js",
+  "author": {
+    "name": "Admin",
+    "email": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "peerDependencies": {
+    "angular": "@>=1.3 <1.6",
+    "angular-animate": "^@>=1.3 <1.6",
+    "angular-aria": "@>=1.3 <1.6",
+    "angular-messages": "@>=1.3 <1.6"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-formly-material": "^0.14.1",
+    "angular-material": "^1.0.7",
+    "angular-messages": "^1.5.5",
+    "material": "^0.1.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.9",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "live-server": "^0.9.1"
+  },
+  "scripts": {
+    "prestart": "npm update",
+    "tests": "karma start ./test/karma.conf.js"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "_args": [
+    [
+      "angular-formly-material",
+      "D:\\development\\nth\\nth.web.client"
+    ]
+  ],
+  "_from": "angular-formly-material@*",
+  "_id": "angular-formly-material@0.14.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-formly-material",
+  "_nodeVersion": "3.3.1",
+  "_npmUser": {
+    "email": "kamil.kisiela@ster-project.pl",
+    "name": "kamilkisiela"
+  },
+  "_npmVersion": "2.14.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-formly-material",
+    "raw": "angular-formly-material",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "*",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-formly-material/-/angular-formly-material-0.14.1.tgz",
+  "_shasum": "9f68a530a739f202e3dde03ed46dbdc2a75cc8be",
+  "_shrinkwrap": null,
+  "_spec": "angular-formly-material",
+  "_where": "D:\\development\\nth\\nth.web.client",
+  "author": {
+    "email": "mys.sterowiec@gmail.com",
+    "name": "Kamil Kisiela"
+  },
+  "bugs": {
+    "url": "https://github.com/formly-js/angular-formly-templates-material/issues"
+  },
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-animate": "^1.4.0",
+    "angular-aria": "^1.4.0",
+    "angular-formly": ">=7.3.0",
+    "angular-material": "^1.0.0",
+    "angular-messages": "^1.4.0",
+    "api-check": ">=7.0.0"
+  },
+  "description": "Material design templates for angular-formly",
+  "devDependencies": {
+    "angular-mocks": "^1.4.0",
+    "argv-set-env": "^1.0.0",
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^5.0.0--beta",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "codacy-coverage": "^1.1.3",
+    "codecov.io": "^0.1.6",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.10.3",
+    "html-loader": "^0.4.0",
+    "isparta": "^4.0.0",
+    "isparta-loader": "2.0.0",
+    "jasmine-core": "^2.3.4",
+    "jquery": "^2.1.4",
+    "karma": "^0.13.19",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-html-reporter": "^0.2.0",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "lodash": "^3.10.1",
+    "mys-common-tools": "latest",
+    "webpack": "^1.12.9"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "9f68a530a739f202e3dde03ed46dbdc2a75cc8be",
+    "tarball": "https://registry.npmjs.org/angular-formly-material/-/angular-formly-material-0.14.1.tgz"
+  },
+  "gitHead": "42eb7e57735c391f95d14375584bd603eeef812a",
+  "homepage": "https://github.com/formly-js/angular-formly-templates-material#readme",
+  "keywords": [
+    "AngularJs",
+    "form",
+    "formly",
+    "html",
+    "json",
+    "material"
+  ],
+  "license": "MIT",
+  "main": "dist/formly-material.js",
+  "maintainers": [
+    {
+      "name": "kamilkisiela",
+      "email": "kamil.kisiela@ster-project.pl"
+    }
+  ],
+  "name": "angular-formly-material",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formly-js/angular-formly-templates-material.git"
+  },
+  "scripts": {
+    "build": "npm run build:dist && npm run build:prod",
+    "build:dist": "webpack --progress",
+    "build:prod": "webpack --progress --set-env-NODE_ENV=production",
+    "coverage:codacy": "cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
+    "coverage:codecov": "cat ./coverage/lcov.info | node_modules/.bin/codecov",
+    "coverage:coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "lint": "npm run lint:src && npm run lint:tests",
+    "lint:src": "eslint src/**/*.js",
+    "lint:tests": "eslint tests/**/*.js --no-ignore",
+    "test": "karma start karma.conf.js --set-env-NODE_ENV=ci",
+    "test:watch": "karma start karma.conf.js"
+  },
+  "version": "0.14.1"
+}

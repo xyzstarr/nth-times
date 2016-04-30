@@ -2,7 +2,7 @@
   "name": "nth.api",
   "version": "0.0.0",
   "description": "nth.api",
-  "main": "app.js",
+  "main": "scripts/boot/index",
   "author": {
     "name": "Admin",
     "email": ""
